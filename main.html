@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizrizz</title>
+    <link rel="stylesheet" href="brain.css">
+    <style>
+        /* Basic styles for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Add margin to the container */
+        #container {
+            margin-top: 100px; /* Adjust this value as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Quizrizz</h1>
+
+    <div id="container">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ex animi eum, voluptatibus quam voluptas delectus recusandae nulla culpa, corrupti in dolorum. Laboriosam nobis iure, repellat doloribus accusantium aliquam cum!</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quo quod amet itaque aspernatur ea labore a quis hic tempora odit eveniet nisi dolores quidem cupiditate nulla sapiente tempore molestiae.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut explicabo dolorem laborum dolor nisi quod optio voluptatibus perferendis eveniet numquam, inventore velit amet dolore sint. Nesciunt alias earum quod minus.</div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <img src="blah.jpeg.png">
+            <h2>Learn Polynomials?</h2>
+            <p>Oh, gusto mo bang matutunan ang factoring polynomials nang mas madali kahit hindi ka nag-aaral? Hindi pwede! Kaya halika, makinig sa aming kanta tungkol sa Factoring Polynomials!</p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById("myModal");
+
+        // Show the modal when the page loads
+        window.onload = function() {
+            modal.style.display = "block";
+        }
+
+        // Get the <span> element that closes the modal
+        const span = document.getElementById("closeModalBtn");
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

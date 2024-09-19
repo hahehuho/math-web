@@ -1,0 +1,39 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+#container div{
+    align-items: center;
+    height: 370px;
+    width: 355px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 7px;
+    margin: 25px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.ads{
+    width: 400px;
+    background: burlywood;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30 px;
+    color: black;
+}
+
+.ads img{
+    width: 280px;
+    margin-top: 3px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
